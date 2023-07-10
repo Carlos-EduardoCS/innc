@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+/* MOBILE CSS */
+
+/*  display none */
+
+#pc__tab-only{
+    display: none;
+}
+
+/* imports  */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+@font-face {
+    font-family: Ginger;
+    src: url(../fonts/Ginger.otf);
+    src: url(../fonts/Ginger.ttf);
+    src: url(../fonts/Ginger.woff);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#header{
+    line-height: 6px;
+    box-sizing: border-box;
+    height: 80px;
+    padding: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000;
+}
+
+a{
+    font-family: 'Poppins', sans-serif;
+    margin-left: -16px;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(77, 114, 246);
+}
+
+
+.logo{
+    width: 80px;
+}
+
+#menu{
+    display: flex;
+    list-style: none;
+    gap: .5rem;
+}
+
+#menu a {
+    display: block;
+    margin-left: px;
+    padding: .5rem;
+}
+
+#btn-mobile{
+    display:flex;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+    gap: .5rem;
+}
+
+.hamburger{
+    color: white;
+    width: 20px;
+    border-top: 2px solid;
+}
+
+.hamburger::after, .hamburger::before{
+    display: block;
+    content: '';
+    width: 20px;
+    height: 2px;
+    margin-top: 7px;
+    background: currentColor;
+    transition: .4s;
+    position: relative;
+}
+
+#nav.active .hamburger{
+    transition: .2s;
+    border-top-color: transparent;
+
+}
+
+#nav.active .hamburger::before{
+    transition: .5s;
+    transform: rotate(135deg);
+
+}
+
+#nav.active .hamburger::after{
+    transition: .5s;
+    transform: rotate(-135deg);
+    top: -9px;
+    
+}
+
+#menu{
+    display:block;
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    right: 0px;
+    padding-bottom: 10px;
+    height: 0px;
+    background-color: #000000;
+    visibility: hidden;
+    overflow-y: hidden;
+    transition: .8s;
+}
+
+#nav.active #menu{
+    position: absolute;
+    height: 20vh;
+    visibility: visible;
+    overflow-y: auto;
+}
+
+a:hover{
+    color:  rgb(77, 114, 246);
+    transition: .5s;
+}
+
+#menu a{
+    padding: 1rem 0;
+    margin:  0 1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.301);
+}

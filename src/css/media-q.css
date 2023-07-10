@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+/* MEDIA QUERY */
+
+/*  display none */
+
+#btn-mobile{
+    display: none;
+}
+
+.logo{
+    display: none
+}
+
+/* IMPORTS  */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+@font-face {
+    font-family: Ginger;
+    src: url(../fonts/Ginger.otf);
+    src: url(../fonts/Ginger.ttf);
+    src: url(../fonts/Ginger.woff);
+}
+
+/* FINISH IMPORTS */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 1280px) {
+    #pc__tab-only{
+        display: block;
+        display: flex;
+        gap: 80px;
+        justify-content: space-around;
+    }
+
+}
