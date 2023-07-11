@@ -2,15 +2,7 @@
 
 /* MEDIA QUERY */
 
-/*  display none */
 
-#btn-mobile{
-    display: none;
-}
-
-.logo{
-    display: none
-}
 
 /* IMPORTS  */
 
@@ -25,18 +17,46 @@
 
 /* FINISH IMPORTS */
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
-@media screen and (min-width: 1280px) {
-    #pc__tab-only{
-        display: block;
+@media screen and (min-width: 819px) {
+    /*  display none */
+    #nav, #btn-mobile, button{
+        display: none;
+    }
+
+    /* finish display none */
+
+    #header{
+        position: sticky;
+    }
+
+    body{
+        background-image: url(../imgs/bg_full_hd.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .pc-nav{
         display: flex;
-        gap: 80px;
-        justify-content: space-around;
+    }
+
+    .ul-pc-nav{
+        display: flex;
+        gap: 20px;
+        list-style: none;
+    }
+
+    .logo_innc_pc_nav{
+        width: 100px;
+    }
+
+    .ul-pc-nav > a{
+        color: rgb(255, 255, 255);
+    }
+
+    .ul-pc-nav > a:hover{
+        transition: 500ms;
+        color: rgb(197, 197, 198);
     }
 
 }

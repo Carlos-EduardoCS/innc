@@ -1,56 +1,53 @@
 @charset "UTF-8";
-
-/* MOBILE CSS */
-
-/*  display none */
-
-#pc__tab-only{
-    display: none;
-}
-
-/* imports  */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
-@font-face {
-    font-family: Ginger;
-    src: url(../fonts/Ginger.otf);
-    src: url(../fonts/Ginger.ttf);
-    src: url(../fonts/Ginger.woff);
+/* display none */
+
+.pc-nav{
+    display: none;
 }
 
 
 *{
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-#header{
-    line-height: 6px;
-    box-sizing: border-box;
-    height: 80px;
-    padding: 1.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #000000;
+body{
+    background-image: url(../imgs/bg_moblie.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 a{
-    font-family: 'Poppins', sans-serif;
-    margin-left: -16px;
-    color: white;
+    font-weight: normal;
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
-a:hover{
-    color: rgb(77, 114, 246);
+
+#logo, .logo-innc{
+    width: 100px;
+    display: block;
 }
 
 
-.logo{
-    width: 80px;
+
+#header{
+    box-sizing: border-box;
+    height: 90px;
+    padding: 1rem;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.452);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
 }
 
 #menu{
@@ -60,8 +57,8 @@ a:hover{
 }
 
 #menu a {
+    color: #FFF;
     display: block;
-    margin-left: px;
     padding: .5rem;
 }
 
@@ -71,13 +68,13 @@ a:hover{
     font-size: 1rem;
     border: none;
     background: none;
-    color: white;
+    color: rgb(255, 255, 255);
     cursor: pointer;
     gap: .5rem;
 }
 
 .hamburger{
-    color: white;
+    color: rgb(255, 255, 255);
     width: 20px;
     border-top: 2px solid;
 }
@@ -113,33 +110,42 @@ a:hover{
 }
 
 #menu{
+    text-align: right;
     display:block;
     position: absolute;
     width: 100%;
-    top: 60px;
+    height: 30vh;
+    top: 90px;
     right: 0px;
     padding-bottom: 10px;
     height: 0px;
-    background-color: #000000;
+    background: rgba(0, 0, 0, 0.452);
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
     visibility: hidden;
     overflow-y: hidden;
     transition: .8s;
 }
 
 #nav.active #menu{
+    background: rgba(0, 0, 0, 0.452);
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
     position: absolute;
-    height: 20vh;
+    height: 30vh;
+    width: 100%;
     visibility: visible;
-    overflow-y: auto;
-}
 
-a:hover{
-    color:  rgb(77, 114, 246);
-    transition: .5s;
 }
 
 #menu a{
     padding: 1rem 0;
-    margin:  0 1rem;
+    margin:  0 1.2rem;
     border-bottom: 2px solid rgba(255, 255, 255, 0.301);
 }
+
+#menu a:hover{
+    color: #d1d1d1;
+}
+
+
